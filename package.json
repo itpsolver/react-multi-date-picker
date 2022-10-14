@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shahabyazdi/react-multi-date-picker.git"
+    "url": "git+https://github.com/itpsolver/react-multi-date-picker.git"
   },
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
   "author": "Shahab Yazdi <sh.yazdi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shahabyazdi/react-multi-date-picker/issues"
+    "url": "https://github.com/itpsolver/react-multi-date-picker/issues"
   },
   "homepage": "https://shahabyazdi.github.io/react-multi-date-picker/",
   "devDependencies": {
