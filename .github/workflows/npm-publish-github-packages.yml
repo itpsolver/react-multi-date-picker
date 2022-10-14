@@ -20,8 +20,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org/'
       - run: npm install --legacy-peer-deps
-      # 여기서 빌드를 해 버리면 module name 문제 때문에 사용시 import가 어렵다.
-      # - run: npm run build
+      - run: npm run build
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}         
@@ -38,6 +37,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install --legacy-peer-deps
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
