@@ -1,5 +1,5 @@
 {
-  "name": "react-multi-date-picker-itpsolver",
+  "name": "@itpsolver/react-multi-date-picker",
   "version": "0.0.7",
   "description": "a simple React datepicker component for working with gregorian, persian, arabic and indian calendars with the ability to select the date by single, multiple and range pickers.",
   "main": "./build/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itpsolver/react-multi-date-picker-itpsolver.git"
+    "url": "git+https://github.com/itpsolver/react-multi-date-picker.git"
   },
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
   "author": "Shahab Yazdi <sh.yazdi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/itpsolver/react-multi-date-picker-itpsolver/issues"
+    "url": "https://github.com/itpsolver/react-multi-date-picker/issues"
   },
   "homepage": "https://shahabyazdi.github.io/react-multi-date-picker/",
   "devDependencies": {
