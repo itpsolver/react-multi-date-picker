@@ -20,6 +20,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org/'
       - run: npm install --legacy-peer-deps
+      - run: npm run build
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}         
@@ -36,6 +37,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install --legacy-peer-deps
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
