@@ -19,25 +19,10 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org/'
+      # 모듈명은 그대로인데 모듈명이 바뀌어서(=fork했으므로), 적용시 import를 못하는 문제 때문에 alias 처리를 해 줌
+      #   - npm install [alias]@npm:[fork한 모듈명] 의 형태
       - run: npm install --legacy-peer-deps react-multi-date-picker@npm:@itpsolver/react-multi-date-picker
       - run: npm run build
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}         
-  publish-github-registry:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-      - run: npm install --legacy-peer-deps react-multi-date-picker@npm:@itpsolver/react-multi-date-picker
-      - run: npm run build
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
