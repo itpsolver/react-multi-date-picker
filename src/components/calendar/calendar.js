@@ -289,10 +289,10 @@ function Calendar(
 
   initPlugins();
 
-  function isMobile() {
+  function isMBLBool() {
     return typeof className === "string" && className.includes("rmdp-mobile");
   }
-  const isMBL = isMobile(); // 원본 소스와의 naming 충돌을 피하기 위해 isMBL 명명 사용
+  const isMBL = isMBLBool(); // 원본 소스와의 naming 충돌을 피하기 위해 isMBL 명명 사용
 
   return state.today ? (
     <div
