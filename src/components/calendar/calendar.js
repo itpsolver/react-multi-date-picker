@@ -72,6 +72,7 @@ function Calendar(
 ) {
   if (currentDate && !(currentDate instanceof DateObject)) {
     console.warn("currentDate must be instance of DateObject");
+
     currentDate = undefined;
   }
 
@@ -234,7 +235,7 @@ function Calendar(
     formattingIgnoreList,
     fullYear,
     weekPicker,
-  ]); // useEffect (E)
+  ]);
 
   useEffect(() => {
     if (!minDate && !maxDate) return;
@@ -289,11 +290,6 @@ function Calendar(
 
   initPlugins();
 
-  function isMBLBool() {
-    return typeof className === "string" && className.includes("rmdp-mobile");
-  }
-  const isMBL = isMBLBool(); // 원본 소스와의 naming 충돌을 피하기 위해 isMBL 명명 사용
-
   return state.today ? (
     <div
       ref={setRef}
@@ -311,19 +307,17 @@ function Calendar(
               isRightToLeft ? "rmdp-rtl" : ""
             } ${getBorderClassName(["left", "right"])}`}
           >
-            {!isMBL && (
-              <Header
-                {...globalProps}
-                disableYearPicker={disableYearPicker}
-                disableMonthPicker={disableMonthPicker}
-                buttons={buttons}
-                renderButton={renderButton}
-                handleMonthChange={handleMonthChange}
-                disabled={disabled}
-                hideMonth={hideMonth}
-                hideYear={hideYear}
-              />
-            )}
+            <Header
+              {...globalProps}
+              disableYearPicker={disableYearPicker}
+              disableMonthPicker={disableMonthPicker}
+              buttons={buttons}
+              renderButton={renderButton}
+              handleMonthChange={handleMonthChange}
+              disabled={disabled}
+              hideMonth={hideMonth}
+              hideYear={hideYear}
+            />
             <div style={{ position: "relative" }}>
               <DayPicker
                 {...globalProps}
@@ -336,17 +330,6 @@ function Calendar(
                 hideWeekDays={hideWeekDays}
                 displayWeekNumbers={displayWeekNumbers}
                 weekNumber={weekNumber}
-                // 이하 header를 DayPicker 안에 우겨넣기 위해 추가
-                isMBL={isMBL}
-                monthAndYearsForHeader={globalProps.monthAndYears}
-                disableYearPicker={disableYearPicker}
-                disableMonthPicker={disableMonthPicker}
-                buttons={buttons}
-                renderButton={renderButton}
-                handleMonthChange={handleMonthChange}
-                disabled={disabled}
-                hideMonth={hideMonth}
-                hideYear={hideYear}
               />
               {!fullYear && (
                 <>
@@ -370,7 +353,7 @@ function Calendar(
       {clonedPlugins.bottom}
       {children}
     </div>
-  ) : null; // return (E)
+  ) : null;
 
   function initPlugins() {
     if (!ref.current.isReady || !isArray(plugins)) return;
@@ -429,7 +412,7 @@ function Calendar(
         })
       );
     });
-  } // initPlugins (E)
+  }
 
   function handleChange(selectedDate, state) {
     if (disabled) return;
@@ -551,7 +534,7 @@ function Calendar(
 
     return [monthNames, years];
   }
-} // Calendar (E)
+}
 
 export default forwardRef(Calendar);
 
