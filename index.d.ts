@@ -308,7 +308,7 @@ declare module "react-multi-date-picker" {
     weekNumber?: string;
     weekPicker?: boolean;
     isMobile?: boolean;
-  }
+  } // CalendarProps
 
   export interface DatePickerProps {
     arrow?: boolean | React.ReactElement;
@@ -467,8 +467,7 @@ declare module "react-multi-date-picker" {
     mobileButtons?: Array<
       HTMLAttributes<HTMLButtonElement> & { label: string }
     >;
-    isMobile?: boolean;
-  }
+  } // DatePickerProps
 
   export { DateObject };
   export function Calendar(props: CalendarProps): React.ReactElement;
