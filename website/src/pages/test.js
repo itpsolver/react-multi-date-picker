@@ -73,12 +73,11 @@ export default function Ref({ pageContext }) {
           }}
         >
           <Calendar
-            className={`${isMobile && "rmdp-mobile"}`} // 모바일: 스타일이 좀 커지면서 정리되는 느낌
+            className={`${isMobile && "rmdp-mobile"}`} // rmdp-mobile 클래스 유무가 Calendar 내부적으로 모바일 여부 플래그를 생성한다.
             value={val}
             onChange={setVal}
             range
             numberOfMonths={2}
-            isMobile={isMobile} // 커스텀 속성
             // rangeHover // 속성은 있다고 하는데 작동하지 않음
             // showOtherDays // 날짜의 빈 칸을 전월/익월 날짜로 채우기
           />

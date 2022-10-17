@@ -67,12 +67,9 @@ function Calendar(
     displayWeekNumbers,
     weekNumber,
     weekPicker,
-    isMobile = false,
   },
   outerRef
 ) {
-  console.log(`## isMobile: ${isMobile}`);
-
   if (currentDate && !(currentDate instanceof DateObject)) {
     console.warn("currentDate must be instance of DateObject");
     currentDate = undefined;
@@ -292,6 +289,11 @@ function Calendar(
 
   initPlugins();
 
+  function isMobile() {
+    return typeof className === "string" && className.includes("rmdp-mobile");
+  }
+  const isMBL = isMobile(); // 원본 소스와의 naming 충돌을 피하기 위해 isMBL 명명 사용
+
   return state.today ? (
     <div
       ref={setRef}
@@ -309,7 +311,7 @@ function Calendar(
               isRightToLeft ? "rmdp-rtl" : ""
             } ${getBorderClassName(["left", "right"])}`}
           >
-            {!isMobile && (
+            {!isMBL && (
               <Header
                 {...globalProps}
                 disableYearPicker={disableYearPicker}
@@ -335,7 +337,7 @@ function Calendar(
                 displayWeekNumbers={displayWeekNumbers}
                 weekNumber={weekNumber}
                 // 이하 header를 DayPicker 안에 우겨넣기 위해 추가
-                isMobile={isMobile}
+                isMBL={isMBL}
                 monthAndYearsForHeader={globalProps.monthAndYears}
                 disableYearPicker={disableYearPicker}
                 disableMonthPicker={disableMonthPicker}

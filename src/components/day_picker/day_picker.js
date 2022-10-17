@@ -24,7 +24,7 @@ export default function DayPicker({
   displayWeekNumbers,
   weekNumber = "",
   // 이하 header를 DayPicker 안에 우겨넣기 위해 추가
-  isMobile,
+  isMBL,
   setState,
   monthAndYearsForHeader,
   disableYearPicker,
@@ -78,7 +78,7 @@ export default function DayPicker({
         className={`rmdp-day-picker ${fullYear ? "rmdp-full-year" : ""}`}
         // style={{ display: fullYear ? "grid" : "flex" }}
         style={{
-          display: fullYear ? "grid" : `${isMobile ? "block" : "flex"}`,
+          display: fullYear ? "grid" : `${isMBL ? "block" : "flex"}`,
         }}
       >
         {months.map((weeks, monthIndex) => {
@@ -102,7 +102,7 @@ export default function DayPicker({
             >
               {/* 월표기 + 월이동 화살표버튼 */}
               {/* 원래 달력이 여러개라도 한 셋트만 존재하던 것을, 달력마다 상단에 들어가도록 수정함 */}
-              {isMobile && (
+              {isMBL && (
                 <HeaderMobile
                   state={state}
                   setState={setState}
