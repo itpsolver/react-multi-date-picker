@@ -102,7 +102,7 @@ export default function DayPicker({
             >
               {/* 월표기 + 월이동 화살표버튼 */}
               {/* 원래 달력이 여러개라도 한 셋트만 존재하던 것을, 달력마다 상단에 들어가도록 수정함 */}
-              {isMBL && (
+              {/* {isMBL && (
                 <HeaderMobile
                   state={state}
                   setState={setState}
@@ -123,7 +123,7 @@ export default function DayPicker({
                   isStartMonth={isStartMonth}
                   isEndMonth={isEndMonth}
                 />
-              )}
+              )} */}
               {fullYear && (
                 <div className="rmdp-month-name">{monthNames[monthIndex]}</div>
               )}
