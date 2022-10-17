@@ -4,7 +4,7 @@ import WeekDays from "../week_days/week_days";
 import selectDate from "../../shared/selectDate";
 import isSameDate from "../../shared/isSameDate";
 import getRangeClass from "../../shared/getRangeClass";
-import HeaderMobile from "../header/headerMobile";
+// import HeaderMobile from "../header/headerMobile";
 
 export default function DayPicker({
   state,
