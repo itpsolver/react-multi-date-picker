@@ -4,6 +4,7 @@ import WeekDays from "../week_days/week_days";
 import selectDate from "../../shared/selectDate";
 import isSameDate from "../../shared/isSameDate";
 import getRangeClass from "../../shared/getRangeClass";
+import HeaderMobile from "../header/headerMobile";
 
 export default function DayPicker({
   state,
@@ -22,6 +23,18 @@ export default function DayPicker({
   monthAndYears: [monthNames],
   displayWeekNumbers,
   weekNumber = "",
+  // 이하 header를 DayPicker 안에 우겨넣기 위해 추가
+  isMobile,
+  setState,
+  monthAndYearsForHeader,
+  disableYearPicker,
+  disableMonthPicker,
+  buttons,
+  renderButton,
+  handleMonthChange,
+  disabled,
+  hideMonth,
+  hideYear,
 }) {
   const ref = useRef({}),
     {
@@ -63,82 +76,122 @@ export default function DayPicker({
     mustShowDayPicker && (
       <div
         className={`rmdp-day-picker ${fullYear ? "rmdp-full-year" : ""}`}
-        style={{ display: fullYear ? "grid" : "flex" }}
+        // style={{ display: fullYear ? "grid" : "flex" }}
+        style={{
+          display: fullYear ? "grid" : `${isMobile ? "block" : "flex"}`,
+        }}
       >
-        {months.map((weeks, monthIndex) => (
-          <div
-            key={monthIndex}
-            style={{
-              [isRTL ? "marginLeft" : "marginRight"]:
-                monthIndex + (fullYear ? 0 : 1) < numberOfMonths ? "10px" : "",
-            }}
-          >
-            {fullYear && (
-              <div className="rmdp-month-name">{monthNames[monthIndex]}</div>
-            )}
-            {!hideWeekDays && (
-              <WeekDays
-                state={state}
-                customWeekDays={customWeekDays}
-                weekStartDayIndex={weekStartDayIndex}
-                displayWeekNumbers={displayWeekNumbers}
-                weekNumber={weekNumber}
-              />
-            )}
-            {weeks.map((week, index) => (
-              <div key={index} className="rmdp-week">
-                {displayWeekNumbers && (
-                  <div className="rmdp-day rmdp-disabled">
-                    <span>{week[0].date.format("WW")}</span>
-                  </div>
-                )}
-                {week.map((object, i) => {
-                  //To clear the properties which are added from the previous render
-                  object = {
-                    date: object.date,
-                    day: object.day,
-                    current: object.current,
-                  };
-
-                  let allProps = getAllProps(object),
-                    mustAddClassName =
-                      mustDisplayDay(object) && !object.disabled,
-                    className = `${mustAddClassName ? "sd" : ""}`,
-                    children = allProps.children;
-
-                  if (mustAddClassName)
-                    className = `${className} ${allProps.className || ""}`;
-
-                  delete allProps.className;
-                  delete allProps.children;
-
-                  let parentClassName = getClassName(object, numberOfMonths);
-
-                  if (object.hidden || object.disabled)
-                    className = className.replace("sd", "");
-
-                  return (
-                    <div
-                      key={i}
-                      className={parentClassName}
-                      onClick={() => {
-                        if (!mustDisplayDay(object) || object.disabled) return;
-
-                        selectDay(object, monthIndex, numberOfMonths);
-                      }}
-                    >
-                      <span className={className} {...allProps}>
-                        {mustDisplayDay(object) && !object.hidden
-                          ? children ?? object.day
-                          : ""}
-                      </span>
+        {months.map((weeks, monthIndex) => {
+          // console.log(
+          //   `## monthNames[${monthIndex}]: [${monthNames[monthIndex]}]`
+          // );
+          // console.log(
+          //   `## months[${monthIndex}]: [${JSON.stringify(months[monthIndex])}]` // {unix time : 일자} .. 의 배열로 구성
+          // );
+          const isStartMonth = monthIndex === 0;
+          const isEndMonth = monthIndex === months.length - 1;
+          return (
+            <div
+              key={monthIndex}
+              style={{
+                [isRTL ? "marginLeft" : "marginRight"]:
+                  monthIndex + (fullYear ? 0 : 1) < numberOfMonths
+                    ? "10px"
+                    : "",
+              }}
+            >
+              {/* 월표기 + 월이동 화살표버튼 */}
+              {/* 원래 달력이 여러개라도 한 셋트만 존재하던 것을, 달력마다 상단에 들어가도록 수정함 */}
+              {isMobile && (
+                <HeaderMobile
+                  state={state}
+                  setState={setState}
+                  onChange={onChange}
+                  sort={sort}
+                  handleFocusedDate={handleFocusedDate}
+                  isRTL={isRTL}
+                  fullYear={fullYear}
+                  monthAndYears={monthAndYearsForHeader}
+                  disableYearPicker={disableYearPicker}
+                  disableMonthPicker={disableMonthPicker}
+                  buttons={buttons}
+                  renderButton={renderButton}
+                  handleMonthChange={handleMonthChange}
+                  disabled={disabled}
+                  hideMonth={hideMonth}
+                  hideYear={hideYear}
+                  isStartMonth={isStartMonth}
+                  isEndMonth={isEndMonth}
+                />
+              )}
+              {fullYear && (
+                <div className="rmdp-month-name">{monthNames[monthIndex]}</div>
+              )}
+              {!hideWeekDays && (
+                <WeekDays
+                  state={state}
+                  customWeekDays={customWeekDays}
+                  weekStartDayIndex={weekStartDayIndex}
+                  displayWeekNumbers={displayWeekNumbers}
+                  weekNumber={weekNumber}
+                />
+              )}
+              {weeks.map((week, index) => (
+                <div key={index} className="rmdp-week">
+                  {displayWeekNumbers && (
+                    <div className="rmdp-day rmdp-disabled">
+                      <span>{week[0].date.format("WW")}</span>
                     </div>
-                  );
-                })}
-              </div>
-            ))}
-          </div>
-        ))}
+                  )}
+                  {week.map((object, i) => {
+                    //To clear the properties which are added from the previous render
+                    object = {
+                      date: object.date,
+                      day: object.day,
+                      current: object.current,
+                    };
+
+                    let allProps = getAllProps(object),
+                      mustAddClassName =
+                        mustDisplayDay(object) && !object.disabled,
+                      className = `${mustAddClassName ? "sd" : ""}`,
+                      children = allProps.children;
+
+                    if (mustAddClassName)
+                      className = `${className} ${allProps.className || ""}`;
+
+                    delete allProps.className;
+                    delete allProps.children;
+
+                    let parentClassName = getClassName(object, numberOfMonths);
+
+                    if (object.hidden || object.disabled)
+                      className = className.replace("sd", "");
+
+                    return (
+                      <div
+                        key={i}
+                        className={parentClassName}
+                        onClick={() => {
+                          if (!mustDisplayDay(object) || object.disabled)
+                            return;
+
+                          selectDay(object, monthIndex, numberOfMonths);
+                        }}
+                      >
+                        <span className={className} {...allProps}>
+                          {mustDisplayDay(object) && !object.hidden
+                            ? children ?? object.day
+                            : ""}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
     )
   );
