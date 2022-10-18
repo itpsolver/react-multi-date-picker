@@ -17,11 +17,12 @@ jobs:
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org/'
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org/"
       # 소스코드 내의 모듈명은 그대로인데 fork로 인해 모듈명이 바뀌어서, 적용시 import를 못하는 문제 때문에 alias 처리를 해 줌
       #   - npm install [alias]@npm:[fork한 모듈명] 의 형태
-      - run: npm install --legacy-peer-deps react-multi-date-picker@npm:@itpsolver/react-multi-date-picker
+      # - run: npm install --legacy-peer-deps react-multi-date-picker@npm:@itpsolver/react-multi-date-picker
+      - run: npm install --legacy-peer-deps
       - run: npm run build
       - run: npm publish --access public
         env:
