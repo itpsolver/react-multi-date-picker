@@ -1,3 +1,21 @@
+## This is forked version of react-multi-date-picker.
+
+## And modified by itpsolver for personal use.
+
+---
+
+## 실행 방법
+
+- 라이브러리
+  - yarn berry로 관리 (.yarnrc.xml => nodeLinker: node-modules)
+  - 빌드명령: yarn build
+- 웹사이트
+  - cd website
+  - gatsby 를 사용하는데 yarn과 잘 안맞아서 npm으로 실행
+  - 서버실행: npm start
+
+---
+
 # DatePicker
 
 Simple React datepicker component for working with `gregorian`, `persian`, `arabic` and `indian` calendars
