@@ -84,7 +84,7 @@ export default function Doc({ otherProps, localeImport, language, translate }) {
   const target = {
     title: "Dynamic Portal Target",
     code: `import React, { useEffect, useState } from "react";
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ``

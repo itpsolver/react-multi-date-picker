@@ -1,4 +1,4 @@
-declare module "react-multi-date-picker" {
+declare module "@itpsolver/react-multi-date-picker" {
   import React, { HTMLAttributes } from "react";
   import DateObject, { Calendar, Locale } from "react-date-object";
 
@@ -529,7 +529,7 @@ declare module "react-multi-date-picker/plugins/date_picker_header" {
 
 declare module "react-multi-date-picker/plugins/colors" {
   import { HTMLAttributes } from "react";
-  import type { Plugin } from "react-multi-date-picker";
+  import type { Plugin } from "@itpsolver/react-multi-date-picker";
 
   interface ColorsProps
     extends Omit<HTMLAttributes<HTMLDivElement>, "children"> {

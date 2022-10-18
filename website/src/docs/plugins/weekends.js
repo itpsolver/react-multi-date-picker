@@ -73,7 +73,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
 
   const gregorian = {
     title: "Weekends: gregorian",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import weekends from "react-multi-date-picker/plugins/highlight_weekends"
 .
 .
@@ -96,7 +96,7 @@ ${
 
   const persianWeekend = {
     title: "Weekends: persian",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import weekends from "react-multi-date-picker/plugins/highlight_weekends"
 ${$import}<DatePicker
   plugins={[weekends()]}
@@ -120,7 +120,7 @@ ${
 
   const custom = {
     title: "Weekends: custom",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import weekends from "react-multi-date-picker/plugins/highlight_weekends"
 ${$import}<DatePicker 
   plugins={[weekends([5, 6])]} 

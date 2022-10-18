@@ -19,10 +19,10 @@ export default function Doc({ translate, language, Code }) {
     description: (
       <>
         <Code title={translate("import_datepicker")}>
-          {`import DatePicker from "react-multi-date-picker"`}
+          {`import DatePicker from "@itpsolver/react-multi-date-picker"`}
         </Code>
         <Code title={translate("import_calendar")}>
-          {`import { Calendar } from "react-multi-date-picker"`}
+          {`import { Calendar } from "@itpsolver/react-multi-date-picker"`}
         </Code>
         {language === "fa" && (
           <Link to="../calendars/#%D8%AA%D9%88%D8%B6%DB%8C%D8%AD%D8%A7%D8%AA">
@@ -111,7 +111,7 @@ ${
   const datePicker = {
     title: translate("DatePicker"),
     code: `import React, { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 
 export default function Example() {
   const [value, setValue] = useState(new Date())
@@ -128,7 +128,7 @@ export default function Example() {
   const calendar = {
     title: translate("Calendar"),
     code: `import React, { useState } from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 
 export default function Example() {
   const [value, setValue] = useState(new Date())
@@ -146,7 +146,7 @@ export default function Example() {
     title: "DateObject",
     description: translate("dateobject"),
     code: `import React from "react"
-import DatePicker, { DateObject } from "react-multi-date-picker"
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 
 export default function Example() {
   const [value, setValue] = useState(new DateObject())

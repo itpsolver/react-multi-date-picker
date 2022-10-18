@@ -138,7 +138,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
     title: "Settings Bottom",
     description: <div></div>,
     code: `import React, { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import Settings from "react-multi-date-picker/plugins/settings"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 ${$import}const [props, setProps] = useState(${
@@ -189,7 +189,7 @@ ${$import}const [props, setProps] = useState(${
   const custom = {
     title: "Custom Settings",
     code: `import React, { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import Settings from "react-multi-date-picker/plugins/settings"
 ${$import}const [props, setProps] = useState(${
       language === "en"
@@ -237,7 +237,7 @@ ${$import}const [props, setProps] = useState(${
   const otherPickers = {
     title: "Other Pickers",
     code: `import React, { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import Settings from "react-multi-date-picker/plugins/settings"
 ${$import}const initialProps = ${
       language === "en"

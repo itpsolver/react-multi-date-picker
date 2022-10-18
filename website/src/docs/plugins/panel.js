@@ -115,7 +115,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
 
   const sortByDate = {
     title: "Sort By Date",
-    code: `import DatePicker, { DateObject } from "react-multi-date-picker"
+    code: `import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel" 
 ${$import}const [value, setValue] = useState([
   new DateObject(${language === "en" ? "" : `{ calendar: persian }`}),
@@ -155,7 +155,7 @@ ${$import}const [value, setValue] = useState([
 
   const bottom = {
     title: "Position Left",
-    code: `import DatePicker, { DateObject } from "react-multi-date-picker"
+    code: `import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel" 
 ${$import}const [value, setValue] = useState(
   [
@@ -195,7 +195,7 @@ ${$import}const [value, setValue] = useState(
 
   const withoutButton = {
     title: "Without Remove Button",
-    code: `import DatePicker, { DateObject } from "react-multi-date-picker"
+    code: `import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel" 
 ${$import}const [value, setValue] = useState([
   new DateObject(${language === "en" ? "" : `{ calendar: persian }`}), 
@@ -237,7 +237,7 @@ ${$import}const [value, setValue] = useState([
 
   const clickListener = {
     title: "Date Click Listener",
-    code: `import DatePicker, { DateObject } from "react-multi-date-picker"
+    code: `import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel" 
 ${$import}const [value, setValue] = useState([
   new DateObject(${language === "en" ? "" : `{ calendar: persian }`}), 
@@ -297,7 +297,7 @@ ${$import}const [value, setValue] = useState([
 
   const header = {
     title: "Custom Header Name",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel" 
 ${$import}<DatePicker
   plugins={[
@@ -319,7 +319,7 @@ ${$import}<DatePicker
   const focused = {
     title: "Customizing Focused Date",
     description: "focused",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 ${$import}const [focusedDate, setFocusedDate] = useState();
 .

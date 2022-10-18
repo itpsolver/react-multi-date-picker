@@ -9,7 +9,7 @@ import Button from "../../../components/button";
 
 export default function Doc({ language, otherProps, translate }) {
   function code(component, string, customComponent) {
-    return `import DatePicker from "react-multi-date-picker"${
+    return `import DatePicker from "@itpsolver/react-multi-date-picker"${
       language === "en"
         ? component
           ? `

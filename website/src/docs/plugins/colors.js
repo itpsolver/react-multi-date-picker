@@ -73,7 +73,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
   const defaultColor = {
     title: "Default Color",
     code: `import React, { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import colors from "react-multi-date-picker/plugins/colors"
 ${$import}const [props, setProps] = useState({
   multiple: true,
@@ -99,7 +99,7 @@ ${
   const panel = {
     title: "With DatePanel",
     code: `import React, { useState } from "react"
-import DatePicker, { DateObject } from "react-multi-date-picker"
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker"
 import colors from "react-multi-date-picker/plugins/colors"
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 ${$import}const yesterday = new DateObject(${

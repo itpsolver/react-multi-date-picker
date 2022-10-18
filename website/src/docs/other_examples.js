@@ -66,7 +66,7 @@ export default function Doc({ language, otherProps, localeImport }) {
   const customMonthYear = {
     title: "Manually Set Year And Month In DatePicker",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""

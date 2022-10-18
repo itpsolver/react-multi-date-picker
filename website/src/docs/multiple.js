@@ -32,7 +32,7 @@ export default function Doc({ translate, language, otherProps, codeEnd }) {
     title: "Multiple Mode",
     description: "multiple_mode",
     code: `import { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ``
@@ -76,7 +76,7 @@ export default function Example() {
   const datePanel = {
     title: "DatePanel",
     description: "date_panel_description",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 ${
   language === "en"
@@ -107,7 +107,7 @@ import persian_fa from "react-date-object/locales/persian_fa"
   const sort = {
     title: "Sorting Dates",
     description: "multiple_sort_example",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 ${
   language === "en"

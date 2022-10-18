@@ -8,7 +8,7 @@ export default function Doc({ language, otherProps, translate, Code }) {
   function code(locale, string, mustImportDateObject) {
     return `import DatePicker${
       mustImportDateObject ? `, { DateObject }` : ""
-    } from "react-multi-date-picker"
+    } from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ""
@@ -342,7 +342,7 @@ const weekDays = [
           </>
         )}
         <Code>
-          {`import DatePicker from "react-multi-date-picker"
+          {`import DatePicker from "@itpsolver/react-multi-date-picker"
 import gregorian_ar from "react-date-object/locales/gregorian_ar"
 
 export default function Example() {
@@ -400,7 +400,7 @@ export default gregorian_en_lowercase;
 `}
         </Code>
         <Code title="*example.js:">
-          {`import DatePicker from "react-multi-date-picker"
+          {`import DatePicker from "@itpsolver/react-multi-date-picker"
 import gregorian_en_lowercase from "./gregorian_en_lowercase"
 
 export default function Example() {

@@ -7,7 +7,7 @@ import size from "react-element-popper/animations/size";
 export default function Doc({ otherProps, language }) {
   function code(name, code) {
     name = [].concat(name);
-    return `import DatePicker from "react-multi-date-picker"
+    return `import DatePicker from "@itpsolver/react-multi-date-picker"
 ${name
   .map(
     (name) => `import ${name} from "react-element-popper/animations/${name}"`

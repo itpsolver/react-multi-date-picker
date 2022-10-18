@@ -409,7 +409,7 @@ ${
     title: "Custom Tooltip",
     description: "tooltip",
     code: `import React, { useState, useRef } from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""

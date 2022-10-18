@@ -78,7 +78,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
     title: "onChange (single mode)",
     description: "on_change",
     code: `import { useState } from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ""
@@ -406,7 +406,7 @@ return(
     title: "onMonthChange",
     description: "on_month_change",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""
@@ -466,7 +466,7 @@ export default function Example() {
     title: "onYearChange",
     description: "on_year_change",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""
@@ -585,7 +585,7 @@ export default function Example() {
       </>
     ),
     code: `import React, { useState } from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 ${localeImport}${
       language === "en"

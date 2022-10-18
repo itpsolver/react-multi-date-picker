@@ -95,7 +95,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
   const example = {
     title: "Default Range Picker Footer",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 import Footer from "react-multi-date-picker/plugins/range_picker_footer";
 ${$import}const [value, setValue] = useState([
   new DateObject(${
@@ -142,7 +142,7 @@ ${$import}const [value, setValue] = useState([
   const customNames = {
     title: "Custom Names",
     code: `import React from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 import Footer from "react-multi-date-picker/plugins/range_picker_footer";
 ${$import}<Calendar
   range

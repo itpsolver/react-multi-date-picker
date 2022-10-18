@@ -68,7 +68,7 @@ ${
         <p>{translate("code")}:</p>
       </div>
     ),
-    code: `import { Calendar } from "react-multi-date-picker";
+    code: `import { Calendar } from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""

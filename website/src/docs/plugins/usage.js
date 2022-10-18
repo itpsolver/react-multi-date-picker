@@ -30,7 +30,7 @@ export default function Doc({ translate, Code }) {
         </table>
         <Code title="plugins_usage">
           {`import React from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import MyFavoritePlugin from "react-multi-date-picker/plugins/my_favorite_plugin"
 import myFavoriteFunctionalPlugin from "react-multi-date-picker/plugins/my_favorite_functional_plugin"
 

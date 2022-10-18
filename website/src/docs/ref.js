@@ -30,7 +30,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
     title: "Descriptions",
     description: "forward_ref_description",
     code: `import React, { useRef } from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 
 export default function Example() {
   const calendarRef = useRef()
@@ -251,7 +251,7 @@ const [shouldCloseCalendar2, setShouldCloseCalendar2] = useState(false)
     title: "Manually Set Year And Month In Calendar",
     description: "year_month_ref",
     code: `import React, { useRef, useState } from "react";
-import { Calendar, DateObject } from "react-multi-date-picker";
+import { Calendar, DateObject } from "@itpsolver/react-multi-date-picker";
 ${
   language === "en"
     ? ""

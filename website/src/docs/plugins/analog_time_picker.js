@@ -64,7 +64,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
     title: "Default Analog Time Picker",
     description: "default_analog_time_picker",
     code: `import React, { useState } from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 ${$import}const [value, setValue] = useState(new Date());
 .
@@ -93,7 +93,7 @@ ${$import}const [value, setValue] = useState(new Date());
     title: "Color & Background",
     description: "red_clock",
     code: `import React, { useState } from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css";
@@ -124,7 +124,7 @@ ${$import}const [value, setValue] = useState(new Date());
 
   const hideSeconds = {
     title: "Hiding Seconds",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 ${$import}<DatePicker
   format="MM/DD/YYYY HH:mm"
@@ -149,7 +149,7 @@ ${$import}<DatePicker
   const bottom = {
     title: "Position Bottom",
     code: `import React, { useState } from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 ${$import}const [value, setValue] = useState(new Date());
 .
@@ -172,7 +172,7 @@ ${$import}const [value, setValue] = useState(new Date());
 
   const onlyTimePicker = {
     title: "Only Analog Time Picker",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 ${$import}<DatePicker 
   disableDayPicker 

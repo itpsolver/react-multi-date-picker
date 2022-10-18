@@ -58,7 +58,7 @@ export default function Doc({ language, otherProps }) {
     title: "Plugins",
     description: "plugins",
     code: `import React, { useState } from "react"
-import { Calendar, DateObject } from "react-multi-date-picker"
+import { Calendar, DateObject } from "@itpsolver/react-multi-date-picker"
 import DatePickerHeader from "react-multi-date-picker/plugins/date_picker_header"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 import multiColors from "react-multi-date-picker/plugins/colors"

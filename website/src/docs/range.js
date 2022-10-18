@@ -69,7 +69,7 @@ ${localeImport}${
   const eachDaysInRange = {
     title: "Displaying Each Days In Range",
     description: "each_days_in_range",
-    code: `import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
+    code: `import DatePicker, { DateObject, getAllDatesInRange } from "@itpsolver/react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 ${localeImport}${
       language === "en"

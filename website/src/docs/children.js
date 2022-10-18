@@ -7,7 +7,7 @@ export default function Doc({ translate, language, otherProps }) {
   const calendar = {
     title: "Calendar With Children",
     code: `import { useState } from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ``
@@ -58,7 +58,7 @@ export default function Example() {
 
   const datePicker = {
     title: "DatePicker With Children",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 ${
   language === "en"
     ? ``

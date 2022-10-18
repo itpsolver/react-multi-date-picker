@@ -92,7 +92,7 @@ export default function Doc({ language, otherProps, translate, localeImport }) {
     title: "Using TimePicker in Multiple Mode",
     description: "multiple_time_picker",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 ${$import}const [values, setValues] = useState(
@@ -138,7 +138,7 @@ ${$import}const [values, setValues] = useState(
     title: "Position Right",
     description: "time_picker_position_right",
     code: `import React, { useState } from "react";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+import DatePicker, { DateObject } from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 ${$import}const [values, setValues] = useState([
   new DateObject(${
@@ -170,7 +170,7 @@ ${$import}const [values, setValues] = useState([
   const range = {
     title: "Using TimePicker in Range Mode",
     code: `import React from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 ${$import}<DatePicker

@@ -1,5 +1,5 @@
 import React from "react";
-import DatePicker, { Calendar } from "react-multi-date-picker";
+import DatePicker, { Calendar } from "@itpsolver/react-multi-date-picker";
 
 export default function Doc({ translate, language }) {
   let calendars = {

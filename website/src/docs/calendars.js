@@ -430,7 +430,7 @@ export default function Doc({ translate, language, Code }) {
   const persianCalendar = {
     title: "Persian calendar with Farsi locale",
     code: `import React from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_fa from "react-date-object/locales/persian_fa"
 
@@ -449,7 +449,7 @@ export default function Example() {
     title: "Persian DatePicker",
     description: "persian_datepicker_description",
     code: `import React from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_fa from "react-date-object/locales/persian_fa"
 
@@ -478,7 +478,7 @@ export default function Example() {
   const arabicCalendar = {
     title: "Arabic calendar with Arabic locale",
     code: `import React from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 import arabic from "react-date-object/calendars/arabic"
 import arabic_ar from "react-date-object/locales/arabic_ar"
 
@@ -496,7 +496,7 @@ export default function Example() {
   const indianCalendar = {
     title: "Indian calendar with Indian locale",
     code: `import React from "react"
-import { Calendar } from "react-multi-date-picker"
+import { Calendar } from "@itpsolver/react-multi-date-picker"
 import indian from "react-date-object/calendars/indian"
 import indian_hi from "react-date-object/locales/indian_hi"
 
@@ -514,7 +514,7 @@ export default function Example() {
   const datepicker = {
     title: "Persian datepicker with English locale",
     code: `import React from "react"
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "@itpsolver/react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_en from "react-date-object/locales/persian_fa"
 
@@ -690,7 +690,7 @@ console.log(epoch) // 1523097`}</Code>
 export default thai;`}
         </Code>
         <p>{translate("custom_calendar_5")}</p>
-        <Code>{`import { Calendar } from "react-multi-date-picker"
+        <Code>{`import { Calendar } from "@itpsolver/react-multi-date-picker"
 import thai from "./thai"
 
 export default function Example() {
@@ -734,7 +734,7 @@ export default function Example() {
 
 export default thai_th`}</Code>
         <p>{translate("custom_calendar_7")}</p>
-        <Code>{`import { Calendar } from "react-multi-date-picker"
+        <Code>{`import { Calendar } from "@itpsolver/react-multi-date-picker"
 import thai from "./thai"
 import thai_th from "./thai_th"
 

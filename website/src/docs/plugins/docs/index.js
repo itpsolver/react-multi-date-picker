@@ -18,7 +18,7 @@ export default function Doc({ translate, Code }) {
   const stepOne = {
     title: "Step 1: Write Your First Plugin",
     code: `import React from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 
 function MyPlugin() {
   return "my first plugin !";
@@ -51,7 +51,7 @@ export default function Example() {
     title: "Step 2: Detecting The Position Of The Plugin",
     description: "step_two",
     code: `import React from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 
 function MyPlugin({ position }) {
   return <div>My plugin is in the {position}!</div>;
@@ -88,7 +88,7 @@ export default function Example() {
     title:
       "Step 3: Detecting If Another Plugin Is Before Or After The Current Plugin",
     code: `import React from "react";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "@itpsolver/react-multi-date-picker";
 
 function MyPlugin({ nodes }) {
   const className = [];

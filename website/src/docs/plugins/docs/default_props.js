@@ -85,7 +85,7 @@ export default function Doc({ translate }) {
     title: "Calendar & DatePicker",
     description: "calendar_datepicker_props",
     code: `import React from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 
 function MyPlugin({ DatePicker }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import DatePicker from "react-multi-date-picker";
+import DatePicker from "@itpsolver/react-multi-date-picker";
 
 export default function Doc({ language }) {
   const otherProps =

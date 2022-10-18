@@ -66,7 +66,7 @@ export default function Doc({ translate, language, otherProps, localeImport }) {
   };
   const right = {
     title: "Header Right",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePickerHeader from "react-multi-date-picker/plugins/date_picker_header"
 ${$import}<DatePicker
   plugins={[
@@ -78,7 +78,7 @@ ${$import}<DatePicker
 
   const left = {
     title: "Header Left",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePickerHeader from "react-multi-date-picker/plugins/date_picker_header"
 ${$import}<DatePicker
   plugins={[
@@ -95,7 +95,7 @@ ${$import}<DatePicker
 
   const indian = {
     title: "English Calendar with Indian Header",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePickerHeader from "react-multi-date-picker/plugins/date_picker_header"
 import gregorian_hi from "react-date-object/locales/gregorian_hi" //(gregorian calendar, hindi locale)
 ${$import}<DatePicker
@@ -117,7 +117,7 @@ ${$import}<DatePicker
 
   const style = {
     title: "Styling Header",
-    code: `import DatePicker from "react-multi-date-picker"
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker"
 import DatePickerHeader from "react-multi-date-picker/plugins/date_picker_header"
 ${$import}<DatePicker
   plugins={[

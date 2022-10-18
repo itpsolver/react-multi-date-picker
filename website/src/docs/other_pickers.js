@@ -5,7 +5,7 @@ import TimePicker from "../../../plugins/time_picker";
 export default function Doc({ otherProps, localeImport, language }) {
   const timePicker = {
     title: "Time Picker",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 ${localeImport}${
       language === "fa"
@@ -31,7 +31,7 @@ ${localeImport}${
 
   const onlyTimePicker = {
     title: "Only Time Picker",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 ${localeImport}${
       language === "fa"
@@ -59,7 +59,7 @@ ${localeImport}${
 
   const meridiem = {
     title: "Only Time Picker Meridiem",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 ${localeImport}${
       language === "fa"
@@ -87,7 +87,7 @@ ${localeImport}${
 
   const hideSeconds = {
     title: "Hiding Seconds",
-    code: `import DatePicker from "react-multi-date-picker";
+    code: `import DatePicker from "@itpsolver/react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
 ${localeImport}${
       language === "fa"
