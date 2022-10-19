@@ -128,7 +128,7 @@ export default function Header({
                   {years[index]}
                 </span>
               )}
-              .
+              .@
               {!hideMonth && (
                 <span
                   style={{
