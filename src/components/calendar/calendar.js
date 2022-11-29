@@ -17,7 +17,7 @@ import isArray from "../../shared/isArray";
 import check from "../../shared/check";
 import toLocaleDigits from "../../shared/toLocaleDigits";
 import isRTL from "../../shared/isRTL";
-import "./calendar.css";
+// import "./calendar.css";
 
 function Calendar(
   {
