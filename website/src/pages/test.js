@@ -78,6 +78,8 @@ export default function Ref({ pageContext }) {
             onChange={setVal}
             range
             numberOfMonths={2}
+            // disableYearPicker
+            // disableMonthPicker
             // rangeHover // 속성은 있다고 하는데 작동하지 않음
             // showOtherDays // 날짜의 빈 칸을 전월/익월 날짜로 채우기
           />
