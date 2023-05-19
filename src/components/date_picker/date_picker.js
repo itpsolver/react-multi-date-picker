@@ -18,7 +18,7 @@ import check from "../../shared/check";
 import getLocaleName from "../../shared/getLocaleName";
 import toLocaleDigits from "../../shared/toLocaleDigits";
 import isRTL from "../../shared/isRTL";
-import "./date_picker.css";
+// import "./date_picker.css";
 
 function DatePicker(
   {
