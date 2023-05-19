@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --rmdp-primary-teal: #009688;
   --rmdp-secondary-teal: #00796b;
   --rmdp-shadow-teal: #26a69a;
@@ -77,4 +77,4 @@
 
 .teal .rmdp-button:not(.rmdp-action-button):hover {
   background-color: var(--rmdp-deselect-teal);
-}
+} */

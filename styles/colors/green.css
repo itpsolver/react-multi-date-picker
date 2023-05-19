@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --rmdp-primary-green: #3d9970;
   --rmdp-secondary-green: #87ad92;
   --rmdp-shadow-green: #87ad92;
@@ -77,4 +77,4 @@
 
 .green .rmdp-button:not(.rmdp-action-button):hover {
   background-color: var(--rmdp-deselect-green);
-}
+} */
