@@ -8,3 +8,5 @@
 /components
 .npmignore 
 .vscode
+
+/.yarn
