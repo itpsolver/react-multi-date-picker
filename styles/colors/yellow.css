@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --rmdp-primary-yellow: #f7da37;
   --rmdp-secondary-yellow: #c0b025;
   --rmdp-shadow-yellow: #dfdd61;
@@ -77,4 +77,4 @@
 
 .yellow .rmdp-button:not(.rmdp-action-button):hover {
   background-color: var(--rmdp-deselect-yellow);
-} */
+}

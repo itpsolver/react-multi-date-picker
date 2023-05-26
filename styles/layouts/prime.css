@@ -1,4 +1,4 @@
-/* .rmdp-prime.rmdp-wrapper {
+.rmdp-prime.rmdp-wrapper {
   border: 1px solid #8798ad;
 }
 
@@ -39,4 +39,4 @@
 
 .rmdp-prime.ep-arrow::after {
   box-shadow: 0 0 6px #404050 !important;
-} */
+}

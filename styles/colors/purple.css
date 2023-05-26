@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --rmdp-primary-purple: #9c27b0;
   --rmdp-secondary-purple: #7b1fa2;
   --rmdp-shadow-purple: #8e24aa;
@@ -77,4 +77,4 @@
 
 .purple .rmdp-button:not(.rmdp-action-button):hover {
   background-color: var(--rmdp-deselect-purple);
-} */
+}
