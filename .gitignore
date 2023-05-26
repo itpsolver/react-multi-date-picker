@@ -8,3 +8,4 @@
 /components
 .npmignore 
 .vscode
+.idea
