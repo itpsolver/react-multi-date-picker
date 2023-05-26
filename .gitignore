@@ -8,6 +8,4 @@
 /components
 .npmignore 
 .vscode
-.yarn/
-.cache
 .idea
