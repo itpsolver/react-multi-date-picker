@@ -78,41 +78,22 @@ export default function Header({
         ) : (
           months.map((month, index) => (
             <div key={index} className="rmdp-header-values" style={style}>
-              {/* ###################### header, headerMobile 둘 다 고려해 주어야 함. ####################### */}
-              {/* ============== 원래 'October, 2022' 같은 형식으로 년월이 출력되고 있었음 (S) ============== */}
-              {/* {!hideMonth && (
-                    <span
-                      style={{
-                        cursor:
-                          disabled || disableMonthPicker || onlyMonthPicker
-                            ? "default"
-                            : "pointer",
-                      }}
-                      onClick={() =>
-                        !disableMonthPicker && toggle("mustShowMonthPicker")
-                      }
-                    >
-                      {month}
-                      {!hideYear && (isRTL ? "،" : ",")}
-                    </span>
-                  )}
-                  {!hideYear && (
-                    <span
-                      style={{
-                        cursor:
-                          disabled || disableYearPicker || onlyYearPicker
-                            ? "default"
-                            : "pointer",
-                      }}
-                      onClick={() =>
-                        !disableYearPicker && toggle("mustShowYearPicker")
-                      }
-                    >
-                      {years[index]}
-                    </span>
-                  )} */}
-              {/* ============== 원래 'October, 2022' 같은 형식으로 년월이 출력되고 있었음 (E) ============== */}
-              {/* ===================== '2022.October' 같은 형식으로 출력 포맷 변경 (S) ====================== */}
+              {!hideMonth && (
+                <span
+                  style={{
+                    cursor:
+                      disabled || disableMonthPicker || onlyMonthPicker
+                        ? "default"
+                        : "pointer",
+                  }}
+                  onClick={() =>
+                    !disableMonthPicker && toggle("mustShowMonthPicker")
+                  }
+                >
+                  {month}
+                  {!hideYear && (isRTL ? "،" : ",")}
+                </span>
+              )}
               {!hideYear && (
                 <span
                   style={{
@@ -128,23 +109,6 @@ export default function Header({
                   {years[index]}
                 </span>
               )}
-              .
-              {!hideMonth && (
-                <span
-                  style={{
-                    cursor:
-                      disabled || disableMonthPicker || onlyMonthPicker
-                        ? "default"
-                        : "pointer",
-                  }}
-                  onClick={() =>
-                    !disableMonthPicker && toggle("mustShowMonthPicker")
-                  }
-                >
-                  {month}
-                </span>
-              )}
-              {/* ===================== '2022.October' 같은 형식으로 출력 포맷 변경 (E) ====================== */}
             </div>
           ))
         )}
