@@ -4,15 +4,22 @@
 
 ---
 
-## 실행 방법
+### 테스트 방법
 
-- 라이브러리
-  - yarn berry로 관리 (.yarnrc.xml => nodeLinker: node-modules)
-  - 빌드명령: yarn build
-- 웹사이트
-  - cd website
-  - gatsby 를 사용하는데 yarn과 잘 안맞아서 npm으로 실행
-  - 서버실행: npm start
+- 이 프로젝트는 website 라는 프로젝트(온라인 매뉴얼, 샘플 페이지)가 포함되어 있다.
+
+- website의 런칭 방법은 다음과 같다.
+
+  - 라이브러리 빌드
+    - 빌드명령: npm run build
+  - 웹사이트
+    - cd website
+    - 서버실행: npm start
+    - 메인 페이지: http://localhost:8000
+    - 테스트 페이지(임시): http://localhost:8000/test
+
+- 커스터마이징
+  - 웹사이트를 실행시킨 상태에서 라이브러리를 수정하고, 라이브러리 빌드를 통해 hmr을 수행하며 테스트 해 보자.
 
 ---
 
