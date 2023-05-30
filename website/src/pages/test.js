@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DateObject from "react-date-object";
-import DatePicker, { Calendar } from "@itpsolver/react-multi-date-picker";
+import DatePicker, { Calendar } from "../../../build/index.js"; // 이걸 이런식으로 import 해야 HMR 을 사용할 수 있다.
 import "./test.css";
 import { useRef } from "react";
 
@@ -39,6 +39,7 @@ export default function Ref({ pageContext }) {
           <DatePicker
             ref={dpRef}
             className={`${isMobile && "rmdp-mobile"}`} // rmdp-mobile 클래스 유무가 Calendar 내부적으로 모바일 여부 플래그를 생성한다.
+            months={DP_MONTHS}
             value={val}
             onChange={setVal}
             range
@@ -53,3 +54,19 @@ export default function Ref({ pageContext }) {
     </div>
   );
 }
+
+// 월 표기용 배열
+export const DP_MONTHS = [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+];
